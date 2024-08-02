@@ -214,6 +214,7 @@ body   {
 
 
 .donate-btn {
+    position: fixed;
     display: inline-flex;
     background: linear-gradient(to bottom, #FFECA9, #f6cd47);
     color: #4D4D53;
@@ -222,11 +223,12 @@ body   {
     font-weight: normal;
     transition: background-color 0.3s;
     font-size: smaller;
-
+left: 300px;
     text-decoration: none;
     margin: 0 5px; 
     position: relative; 
     top: 34px; 
+    z-index: 1;
 }
 
 .donate-btn:hover {
@@ -235,6 +237,7 @@ body   {
 }
 
 .search-container {
+    position: absolute;
     display: inline-flex;
     align-items: center;
     background-color: #1E2933;
@@ -246,6 +249,8 @@ body   {
     position: relative;
     top: 34px;
     border: 1px solid #11171D;
+    left: 300px;
+
 }
 
 .search-icon {
@@ -320,6 +325,7 @@ body   {
     border-style: solid;
     font-size: 16px;
     font-style: normal;
+   
    
 }
 
@@ -405,6 +411,7 @@ body   {
     height: 20px;
 }
 .content-section {
+    display: block;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -418,22 +425,23 @@ body   {
 }
 
 .column {
-    position: relative; 
+    position: relative;
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
-    flex: 1 1 calc(22% - 20px);  
+    flex: 1 1 calc(22% - 20px);
     margin: 10px;
+   /* z-index: -1;*/
 }
 
 .column::before {
     content: "";
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
-    height: 4px; 
-    border-top-left-radius: 0;  
+    height: 4px;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
     background-color: #75A8D3;
 }
@@ -495,7 +503,258 @@ body   {
 margin-left:  -5px;
 }
 
+/****************************************************************************/
+/*   Success Stories                                                       */
+/****************************************************************************/
 
+
+.success-stories {
+    margin-bottom: 30px;
+    padding: 10px;
+    width: 500px;
+}
+
+.success-stories h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.success-stories p {
+    background-color: #FFE58F;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+   font-size: medium;
+   font-style: italic;
+}
+.success-stories p:hover {
+    color: #5D76AB;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+   font-size: medium;
+   font-style: italic;
+}
+
+.success-stories p::before {
+    content: "";
+    position: absolute;
+    top: 219px;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #FFE58F;
+}
+
+.success-stories a {
+    color: #0056b3;
+    text-decoration: none;
+    margin-top: 0px;
+}
+.success-stories span {
+    color: #444444;
+    text-decoration: none;
+    margin-top: 0px;
+    font-size: smaller;
+}
+
+.success-stories a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.use-python {
+    margin-bottom: 30px;
+}
+
+.use-python h2 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.category {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.category:last-child {
+    border-bottom: none;
+}
+
+.category h3 {
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.category span {
+    display: inline-block;
+    margin-right: 5px;
+    background-color: #E6E8EA;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666666;
+}
+.category span:hover {
+    display: inline-block;
+    margin-right: 5px;
+    background-color: #D0D4D7;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #444444;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+/****************************************************************************/
+/*    Python Enhancement                                                    */
+/****************************************************************************/
+
+.enhancement-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8eaed;
+    padding: 30px 20px;
+    border-bottom: 1px solid #d1d1d1;
+    margin-bottom: 30px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.enhancement-proposals {
+    color: #3776AB;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.enhancement-proposals span {
+    font-weight: normal;
+    color: #737373;
+}
+
+.enhancement-proposals:hover {
+    text-decoration: none;
+    color: #1F3B5B;
+}
+
+
+.rss {
+    display: flex;
+    align-items: center;
+}
+
+.rss img {
+    margin-right: 5px;
+}
+
+.rss a {
+    color: #3776AB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.rss:hover {
+    text-decoration: none;
+}
+
+.psf-section {
+    background: linear-gradient(to bottom, #1c3b57, #3a79a8);
+    color: #FFD343;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.psf-section h2 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: inherit;
+}
+
+.psf-section p {
+    font-size: 14px;
+    margin: 10px 0;
+    max-width: 800px;
+    font-weight: lighter;
+    color: #d9cdb7;
+    line-height: 1.9rem;
+}
+
+
+
+.psf-section a {
+    color: #fecd1a;
+    text-decoration: none;
+}
+
+.psf-section a:hover {
+    text-decoration: none;
+    color: #FFF1C3;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    margin: 4px 0;
+}
+
+.member-button, .donate-button {
+    background-color: #FFDD6D;
+    color: #1c3b57;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 160px;
+    border: #DCA900;
+    border-width: 1px;
+}
+
+.member-button:hover, .donate-button:hover {
+        color: #1F1832;
+        background: linear-gradient(to bottom, #FFECA9, #FFD650);
+}
+
+.psf-logo {
+    margin-top: -200px;
+    margin-left: 950px;
+}
+
+.psf-logo img {
+    height: 200px;
+    width: auto;
+}
 /****************************************************************************/
 /* FOOTER                                                                   */
 /****************************************************************************/
