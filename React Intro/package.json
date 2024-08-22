@@ -1,0 +1,19 @@
+{
+  "name": "reactpkg",
+  "version": "1.0.0",
+  "description": "first react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denada-Bali/Next.js-Repo.git"
+  },
+  "author": "Denalda Bali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denada-Bali/Next.js-Repo/issues"
+  },
+  "homepage": "https://github.com/Denada-Bali/Next.js-Repo#readme"
+}
