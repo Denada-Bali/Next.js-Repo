@@ -1,3 +1,8 @@
+/**
+ * therrasim librarin e react dhe useState per menaxhimin e gjendjes
+ * React router- per navigimin midis nderfaqeve. Router- perfshin aplikacionin, Route- specifikimi i path, Link lidhjet midis faqeve
+ */
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import BookList from './components/BookList';
@@ -5,23 +10,24 @@ import AddBook from './components/AddBook';
 import EditBook from './components/EditBook';
 
 const App = () => {
+  //Krijoj listen (books) dhe setBooks vendos te dhenat e listes 
   const [books, setBooks] = useState([
     { id: 1, title: 'Mindset', author: 'Carol Dweck' },
     { id: 2, title: 'Ti je ajo çfarë vesh', author: 'Jennifer Baumgartner'},
     { id: 3, title: '48 laws of power', author: 'Robert Greene'}
   ]);
 
-  // shtoj nje liber
+  // shtoj nje liber ne liste (tre pikat mbajne librat ekzistuese something like memory)
   const addBook = (book) => {
     setBooks([...books, book]);
   };
 
-  // update librin
+  // update librin duke mare id e librit me pak fjal lidhet me id e librit 
   const editBook = (updatedBook) => {
     setBooks(books.map((book) => (book.id === updatedBook.id ? updatedBook : book)));
   };
 
-  // delete me id
+  // delete me id librin dhe shfaq nje alert te perdoruesi. 
   const deleteBook = (id) => {
     if (window.confirm('Are you sure you want to delete this book?')) {
       setBooks(books.filter((book) => book.id !== id));

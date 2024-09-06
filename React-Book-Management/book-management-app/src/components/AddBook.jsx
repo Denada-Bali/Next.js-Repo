@@ -1,15 +1,21 @@
+/*
+useState eshte hook dhe perdoret per te menaxhuar gjendjen brenda komponentit.
+*/
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//komponent qe kerkon vetem nje parameter
 const AddBook = ({ addBook }) => {
+  {/**get/set te dhenat e librit */}
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = { id: Math.random(), title, author };
-    addBook(newBook);  // thrras addBook function
+    const newBook = { id: Math.random(), title, author }; //ktu krijoj objektin me nje id te rastesishme  Math.random(), titullin dhe autorin 
+    addBook(newBook);  // thrras addBook function  qe kam ndertuar me lart - const AddBook = ({ addBook }) ndryshe mund te quhet funksioni prind
     navigate('/');
   };
 
