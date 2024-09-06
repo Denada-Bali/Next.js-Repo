@@ -1,0 +1,149 @@
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+}
+
+h1 {
+  background-color: #2196F3;
+  color: #FFEB3B;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 48%;
+}
+
+a {
+  color: #FFEB3B;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Book List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #EDEDED;
+  padding: 15px;
+  margin: 10px 380px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button, .link-button {
+  background-color: #FF4533;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover, .link-button:hover {
+  background-color: #BF3427;
+}
+
+
+.link-button {
+  background-color: #fab500;
+  color: #0b0b0b;
+  padding: 9px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.link-button:hover {
+  background-color: #040015;
+  color: #fab500;
+}
+
+
+/* Forma Edit  */
+form {
+  background-color: #fff;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #2196F3;
+  color: #FFEB3B;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #181818;
+}
+
+button, .link-button {
+  flex: 0 1 auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .link-button, button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
