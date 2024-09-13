@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/edit-book/:id" element={<EditBook books={books} editBook={editBook} />} />
 
         </Routes>
-      </div> 
+      </div>
     </Router>
 
   );
